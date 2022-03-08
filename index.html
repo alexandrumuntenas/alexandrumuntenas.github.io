@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alexandru Muntenas</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+  html, body {
+    background: #111;
+    color: #F3F3F3;
+    font-family: 'Ubuntu Mono', monospace;
+  }
+
+  div#contenedordeproyectos {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: 100%;
+  }
+
+  div#listadodeproyectos{
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  ul#proyectos {
+    border: #0F0 5px double;
+    margin: 0;
+    padding: 0;
+  }
+
+  li#proyecto {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    color: #F3F3F3;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  li#proyecto:hover {
+    color: #111;
+    background: #F3F3F3;
+  }
+
+  a {
+    color: #0F0;
+    text-decoration: none;
+  }
+</style>
+<body>
+  <div id="contenedorproyectos">
+    <div id="listadodeproyectos">
+      <h1>@alexandrumuntenas</h1>
+      <ul id="proyectos">
+        <a href="https://github.com/alexandrumuntenas"><li id="proyecto">GitHub</li></a>
+      </ul>
+      <br>
+      <small>Sigo trabajando en esta página...</small>
+    </div>
+  </div>
+</body>
+</html>
