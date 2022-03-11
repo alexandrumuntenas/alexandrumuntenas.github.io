@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,62 +9,128 @@
 </head>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
-  html, body {
-    background: #111;
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #2d0a22;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #a8a4a5;
+    border-radius: 20px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a8a4a5;
+  }
+
+  html {
+    background: rgb(255, 227, 227);
+    background: linear-gradient(22deg, rgba(255, 227, 227, 1) 0%, rgba(224, 255, 255, 1) 48%, rgba(255, 249, 213, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffe3e3", endColorstr="#fff9d5", GradientType=1);
     color: #F3F3F3;
     font-family: 'Ubuntu Mono', monospace;
-  }
-
-  div#contenedordeproyectos {
-    display: flex;
-    align-items: center;
+    font-weight: 100;
     height: 100%;
-    justify-content: 100%;
   }
 
-  div#listadodeproyectos{
-    text-align: center;
-    margin: 0 auto;
+  div#terminal {
+    box-shadow: #2c2c2c 0px 0px 10px;
+    margin: 50px auto;
     max-width: 600px;
+    border-radius: .55vh;
   }
 
-  ul#proyectos {
-    border: #0F0 5px double;
+  div#terminal-barra {
+    background: #2c2c2c;
+    color: #F3F3F3;
+    height: 40px;
+    font-size: 1.1em;
+    border-radius: .55vh .55vh 0 0;
+  }
+
+  div#terminal-barra-titulo {
+    font-weight: 100;
+    padding: 10px;
+    width: auto;
+    text-align: center;
+  }
+
+  div#terminal-barra-acciones{
+    float: right;
+    padding: 10px;
+  }
+
+  div#terminal-barra-acciones button{
+    background-color: #2c2c2c;
+    border: none;
+    color: #FAFAFA;
+  }
+
+  div#terminal-consola {
+    background: #350626;
+    color: #FAFAFA;
+    padding: 10px;
+    border-radius: 0 0 .55vh .55vh;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+  div#terminal-consola p{
+    margin: 0;
+  }
+
+  ul#terminal-consola-opciones{
     margin: 0;
     padding: 0;
   }
 
-  li#proyecto {
+  ul#terminal-consola-opciones li{
     list-style: none;
     padding: 10px;
     margin: 0;
     color: #F3F3F3;
     font-size: 1.2em;
-    font-weight: bold;
     cursor: pointer;
     text-align: left;
   }
 
-  li#proyecto:hover {
+  ul#terminal-consola-opciones li:hover {
     color: #111;
     background: #F3F3F3;
+    text-decoration-color: #111;
   }
 
-  a {
-    color: #0F0;
-    text-decoration: none;
+  ul#terminal-consola-opciones a{
+    text-decoration: #FAFAFA;
+  }
+
+  small {
+    color: #2c2c2c;
   }
 </style>
+
 <body>
-  <div id="contenedorproyectos">
-    <div id="listadodeproyectos">
-      <h1>@alexandrumuntenas</h1>
-      <ul id="proyectos">
-        <a href="https://github.com/alexandrumuntenas"><li id="proyecto">GitHub</li></a>
+  <div id="terminal">
+    <div id="terminal-barra">
+      <div id="terminal-barra-titulo">
+        alexandrumuntenas@github: ~
+      </div>
+    </div>
+    <div id="terminal-consola">
+      <ul id="terminal-consola-opciones">
+        <a href="https://github.com/alexandrumuntenas"><li>GitHub</li></a>
+        <a href="https://github.com/alexandrumuntenas/pingu"><li>Pingu · The Discord Bot</li></a>
       </ul>
-      <br>
-      <small>Sigo trabajando en esta página...</small>
     </div>
   </div>
+  <br>
+  <center>
+    <small>Basado en la terminal de Ubuntu®️</small>
+  </center>
 </body>
+
 </html>
