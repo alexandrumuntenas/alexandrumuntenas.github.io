@@ -31,14 +31,14 @@
     background: rgb(255, 227, 227);
     background: linear-gradient(22deg, rgba(255, 227, 227, 1) 0%, rgba(224, 255, 255, 1) 48%, rgba(255, 249, 213, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffe3e3", endColorstr="#fff9d5", GradientType=1);
-    color: #F3F3F3;
+    color: #2c2c2c;
     font-family: 'Ubuntu Mono', monospace;
     font-weight: 100;
     height: 100%;
   }
 
   div#terminal {
-    box-shadow: #2c2c2c 0px 0px 10px;
+    box-shadow: 0px 0px 40px #9a9a9a;
     margin: 50px auto;
     max-width: 600px;
     border-radius: .55vh;
@@ -59,12 +59,12 @@
     text-align: center;
   }
 
-  div#terminal-barra-acciones{
+  div#terminal-barra-acciones {
     float: right;
     padding: 10px;
   }
 
-  div#terminal-barra-acciones button{
+  div#terminal-barra-acciones button {
     background-color: #2c2c2c;
     border: none;
     color: #FAFAFA;
@@ -79,16 +79,16 @@
     overflow-y: auto;
   }
 
-  div#terminal-consola p{
+  div#terminal-consola p {
     margin: 0;
   }
 
-  ul#terminal-consola-opciones{
+  ul#terminal-consola-opciones {
     margin: 0;
     padding: 0;
   }
 
-  ul#terminal-consola-opciones li{
+  ul#terminal-consola-opciones li {
     list-style: none;
     padding: 10px;
     margin: 0;
@@ -104,12 +104,36 @@
     text-decoration-color: #111;
   }
 
-  ul#terminal-consola-opciones a{
+  ul#terminal-consola-opciones a {
     text-decoration: #FAFAFA;
   }
 
-  small {
-    color: #2c2c2c;
+  div#terminal-entrada{
+    padding: 10px;
+    display: flex;
+  }
+
+  div#terminal-entrada input#terminal-entrada {
+    background: #350626;
+    color: #FAFAFA;
+    border: none;
+    width: 100%;
+    outline: none;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 16px;
+    margin: 0 0 0 5px;
+  }
+
+  div#terminal-entrada input#terminal-entrada::placeholder {
+    color: #AFAFAF;
+  }
+
+  div#terminal-entrada user{
+    color: #54cd0c;
+  }
+
+  div#terminal-entrada aprox{
+    color: #4e60be;
   }
 </style>
 
@@ -122,9 +146,33 @@
     </div>
     <div id="terminal-consola">
       <ul id="terminal-consola-opciones">
-        <a href="https://github.com/alexandrumuntenas"><li>GitHub</li></a>
-        <a href="https://github.com/alexandrumuntenas/pingu"><li>Pingu · The Discord Bot</li></a>
+        <!--- LISTADO DE REPOSITORIOS. HACER DINÁMICO USANDO LAS GH ACTIONS. QUEDA PTE --->
+        <a href="https://github.com/alexandrumuntenas" class="terminal-consola-opcion">
+          <li>
+            <p>Mi Perfil de GitHub</p>
+          </li>
+        </a>
+        <a href="/pingu" class="terminal-consola-opcion">
+          <li>
+            <p>Pingu · The Discord Bot</p>
+            <small>
+              Un bot multifuncional personalizable y gratuito que te ayudará a administrar tu servidor de Discord.
+            </small>
+          </li>
+        </a>
+        <a href="https://github.com/alexandrumuntenas" class="terminal-consola-opcion">
+          <li>
+            <p>50 UI Design Challenges</p>
+            <small>
+              He encontrado una publicación en Instagram y me ha surgido la idea de subir mi progreso en GitHub.
+            </small>
+          </li>
+        </a>
       </ul>
+      <div id="terminal-entrada">
+        <user>usuario@pc184:</user> <aprox>~</aprox>$
+        <input type="text" name="terminal-entrada" id="terminal-entrada" placeholder="">
+      </div>
     </div>
   </div>
   <br>
