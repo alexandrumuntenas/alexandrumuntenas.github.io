@@ -29,7 +29,7 @@
 
   html {
     background: rgb(255, 227, 227);
-    background: linear-gradient(22deg, rgba(255, 227, 227, 1) 0%, rgba(224, 255, 255, 1) 48%, rgba(255, 249, 213, 1) 100%);
+    background: linear-gradient(22deg, rgba(255, 227, 227, 1) 0%, rgba(224, 255, 255, 1) 48%, rgba(255, 249, 213, 1) 100%) fixed;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffe3e3", endColorstr="#fff9d5", GradientType=1);
     color: #2c2c2c;
     font-family: 'Ubuntu Mono', monospace;
@@ -75,7 +75,7 @@
     color: #FAFAFA;
     padding: 10px;
     border-radius: 0 0 .55vh .55vh;
-    max-height: 400px;
+    max-height: 600px;
     overflow-y: auto;
   }
 
@@ -108,9 +108,16 @@
     text-decoration: #FAFAFA;
   }
 
-  div#terminal-entrada{
+  div#terminal-entrada, div#terminal-normal {
     padding: 10px;
+  }
+
+  div#terminal-entrada {
     display: flex;
+  }
+  
+  div#terminal-normal p{
+    padding-top: 10px;
   }
 
   div#terminal-entrada input#terminal-entrada {
@@ -128,12 +135,25 @@
     color: #AFAFAF;
   }
 
-  div#terminal-entrada user{
+  div#terminal-entrada user,
+  div#terminal-normal user {
     color: #54cd0c;
   }
 
-  div#terminal-entrada aprox{
+  div#terminal-entrada aprox,
+  div#terminal-normal aprox {
     color: #4e60be;
+  }
+
+  div#basadoen {
+    text-align: center;
+    padding: 10px;
+  }
+
+  div#aire {
+    padding: 25px;
+    margin: 0 auto;
+    max-width: 600px;
   }
 </style>
 
@@ -145,6 +165,16 @@
       </div>
     </div>
     <div id="terminal-consola">
+      <div id="terminal-normal">
+        <user>usuario@pc184:</user>
+        <aprox>~</aprox>$ whoami
+        <p>Alexandru, un programador amateur. Me gusta la música, la lectura, jugar Minecraft, GNU/Linux y otras muchas cosas...</p>
+        <p>Actualmente estoy enfocado en aprender y trabajar con JavaScript y NodeJS. Estoy formándome de manera independiente. </p>
+      </div>
+      <div id="terminal-normal">
+        <user>usuario@pc184:</user>
+        <aprox>~</aprox>$ ls gh-repos/
+      </div>
       <ul id="terminal-consola-opciones">
         <!--- LISTADO DE REPOSITORIOS. HACER DINÁMICO USANDO LAS GH ACTIONS. QUEDA PTE --->
         <a href="https://github.com/alexandrumuntenas" class="terminal-consola-opcion">
@@ -170,14 +200,15 @@
         </a>
       </ul>
       <div id="terminal-entrada">
-        <user>usuario@pc184:</user> <aprox>~</aprox>$
+        <user>usuario@pc184:</user>
+        <aprox>~</aprox>$
         <input type="text" name="terminal-entrada" id="terminal-entrada" placeholder="">
       </div>
     </div>
   </div>
-  <br>
   <center>
-    <small>Basado en la terminal de Ubuntu®️</small>
+    <small>Inspirado en la terminal de Ubuntu®️</small>
+    <div id="aire"></div>
   </center>
 </body>
 
