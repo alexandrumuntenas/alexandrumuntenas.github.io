@@ -44,6 +44,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: #2c2c2c;
+    height: auto;
   }
 
   #spinner {
@@ -68,13 +69,256 @@
       -webkit-transform: rotate(360deg);
     }
   }
+
+  div#terminal {
+    box-shadow: 0px 0px 40px #9a9a9a;
+    margin: 50px auto;
+    max-width: 600px;
+    border-radius: .55vh;
+  }
+
+  div#terminal-barra {
+    background: #2c2c2c;
+    color: #F3F3F3;
+    height: 40px;
+    font-size: 1.1em;
+    border-radius: .55vh .55vh 0 0;
+  }
+
+  div#terminal-barra-titulo {
+    font-weight: 100;
+    padding: 10px;
+    width: auto;
+    text-align: center;
+  }
+
+  div#terminal-barra-acciones {
+    float: right;
+    padding: 10px;
+  }
+
+  div#terminal-barra-acciones button {
+    background-color: #2c2c2c;
+    border: none;
+    color: #FAFAFA;
+  }
+
+  div#terminal-consola {
+    background: #350626;
+    color: #FAFAFA;
+    padding: 10px;
+    border-radius: 0 0 .55vh .55vh;
+    max-height: 487.9px;
+    overflow-y: auto;
+  }
+
+  div#terminal-consola p {
+    margin: 0;
+  }
+
+  ul#terminal-consola-opciones {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul#terminal-consola-opciones li {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    color: #F3F3F3;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  ul#terminal-consola-opciones li:hover {
+    color: #111;
+    background: #F3F3F3;
+    text-decoration-color: #111;
+  }
+
+  ul#terminal-consola-opciones a {
+    text-decoration: #FAFAFA;
+  }
+
+  div#terminal-entrada,
+  div#terminal-normal {
+    padding: 10px;
+  }
+
+  div#terminal-entrada {
+    display: flex;
+  }
+
+  div#terminal-normal p {
+    padding-top: 10px;
+  }
+
+  div#terminal-entrada input#terminal-entrada {
+    background: #350626;
+    color: #FAFAFA;
+    border: none;
+    width: 100%;
+    outline: none;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 16px;
+    margin: 0 0 0 5px;
+  }
+
+  div#terminal-entrada input#terminal-entrada::placeholder {
+    color: #AFAFAF;
+  }
+
+  div#terminal-entrada user,
+  div#terminal-normal user {
+    color: #54cd0c;
+  }
+
+  div#terminal-entrada aprox,
+  div#terminal-normal aprox {
+    color: #4e60be;
+  }
+
+  div#basadoen {
+    text-align: center;
+    padding: 10px;
+  }
+
+  div#aire {
+    padding: 25px;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  .hide {
+    display: none;
+  }
 </style>
 
 <body>
   <div id="presentacion">
     <h1>Hola, soy Alexandru 👋</h1>
     <p>Estudiante de la ESO, percusionista y programador aprendiz independiente</p>
+    <div id="spinner"></div>
+  </div>
+
+  <div id="contenedor-terminal" class="hide">
+    <div id="terminal">
+      <div id="terminal-barra">
+        <div id="terminal-barra-titulo">
+          alexandrumuntenas@github: ~
+        </div>
+      </div>
+      <div id="terminal-consola">
+        <div id="terminal-normal">
+          <user>usuario@pc184:</user>
+          <aprox>~</aprox>$ whoami
+          <p>Hola, soy Alexandru. 👋</p>
+          <p>Actualmente estoy cursando los estudios de la Educación Secundaria Obligatoria en España. Soy percusionista
+            y
+            me vuelve loco la música. Programador aprendiz independiente, comencé recientemente y poco a poco voy
+            aprendiendo en mi alocado horario. A parte, también me gusta leer, jugar al Minecraft, GNU/Linux, Windows 11
+            y
+            muchas otras cosas.</p>
+          <p>Estoy enfocando mi aprendizaje a muerte con NodeJS. He comenzado un proyectillo que me lleva ya acompañando
+            por
+            1 año, mi bot de Discord, Pingu, que, con este, cada cosa nueva que voy haciendo, siempre trato de añadirme
+            algún nuevo obstáculo para motivar mi aprendizaje y superarme.</p>
+          <p>Dispongo de conocimientos básicos de HTML y CSS3, los cuales los he utilizado para construir mi página de
+            inicio; PHP y MySQL, los cuales empleé para iniciar un pequeño proyecto de gestión de bibliotecas, el código
+            fuente ya no lo tengo, desafortunadamente.</p>
+          <p>Para expandir mi conocimiento, estoy interesado en trabajar con frameworks como AdonisJS y AngularJS,
+            aprender
+            a utilizar bases de datos como MongoDB y Redis, y darle caña pronto a Typescript, que me llama bastante la
+            atención.</p>
+          <p>Este soy yo... A continuación, podrás ver algunas de mis estadísticas. </p>
+          <br>
+          <div><img width="50%" height="auto"
+              src="https://github-readme-stats.vercel.app/api?username=alexandrumuntenas&show_icons=true&locale=en"
+              alt="alexandrumuntenas" /><img
+              src="https://github-readme-streak-stats.herokuapp.com/?user=alexandrumuntenas&" alt="alexandrumuntenas"
+              width="50%" height="auto" /></div>
+        </div>
+        <div id="terminal-normal">
+          <user>usuario@pc184:</user>
+          <aprox>~</aprox>$ ls proyectos-destacados/
+        </div>
+        <ul id="terminal-consola-opciones">
+          <a href="/pingu" class="terminal-consola-opcion">
+            <li>
+              <p>Pingu · The Discord Bot</p>
+              <small>
+                Un bot multifuncional personalizable y gratuito que te ayudará a administrar tu servidor de Discord.
+              </small>
+            </li>
+          </a>
+        </ul>
+        <div id="terminal-normal">
+          <user>usuario@pc184:</user>
+          <aprox>~</aprox>$ ls trabajando-con/
+        </div>
+        <ul id="terminal-consola-opciones">
+          <a href="https://musicaydanzalasgabias.com" class="terminal-consola-opcion">
+            <li>
+              <p>Escuela Municipal de Música y Danza Las Gabias</p>
+              <small>Maquetación y mantenimiento de página web basado en Wordpress. Beaver Builder y Astra para el
+                aspecto
+                de la web (para los más curiosos). A día de hoy sigo trabajando en mejorarla y en hacerlo una web con un
+                diseño más uniforme de lo que era cuando tome las riendas. Habrán errores, sí, pero poco a los estoy
+                corrigiendo.</small>
+            </li>
+          </a>
+        </ul>
+        <div id="terminal-normal">
+          <user>usuario@pc184:</user>
+          <aprox>~</aprox>$ ls otros-proyectos/
+        </div>
+        <ul id="terminal-consola-opciones">
+          <a href="/relojsimple" class="terminal-consola-opcion">
+            <li>
+              <p>Reloj Simple</p>
+              <small>
+                Un reloj simple... solo muestra la hora y la fecha. No tiene nada exageradamente en especial.
+              </small>
+            </li>
+          </a>
+          <a href="/passwordgenerator/" class="terminal-consola-opcion">
+            <li>
+              <p>Generador de contraseñas</p>
+              <small>
+                Genera contraseñas aleatorias con caracteres especiales y números.
+              </small>
+            </li>
+          </a>
+        </ul>
+        <div id="terminal-entrada">
+          <user>usuario@pc184:</user>
+          <aprox>~</aprox>$
+          <input type="text" name="terminal-entrada" id="terminal-entrada" placeholder="">
+        </div>
+      </div>
+    </div>
+    <center>
+      <small>Inspirado en la terminal de Ubuntu®️</small>
+      <div id="aire"></div>
+    </center>
   </div>
 </body>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+<script>
+  $('#presentacion').fadeIn(1000);
+  setTimeout(function () {
+    $('#spinner').hide()
+  }, 4500);
+  setTimeout(function () {
+    $('#presentacion').fadeOut(1000);
+  }, 5000);
+  setTimeout(function () {
+    $('#contenedor-terminal').hide()
+    $('#contenedor-terminal').removeClass('hide');
+    $('#contenedor-terminal').fadeIn(1000);
+  }, 5500);
+</script>
 
 </html>
