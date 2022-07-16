@@ -12,7 +12,7 @@
 
     html {
     background: rgb(255, 227, 227);
-    background: linear-gradient(22deg, rgba(255, 227, 227, 1) 0%, rgba(224, 255, 255, 1) 48%, rgba(255, 249, 213, 1) 100%) fixed;
+    background: linear-gradient(225deg, #B1B2C4 0%, #8182A0 34.9%, #4B4C75 100%) fixed;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffe3e3", endColorstr="#fff9d5", GradientType=1);
     color: #2c2c2c;
     font-family: 'Ubuntu Mono', monospace;
@@ -32,13 +32,13 @@
 
   div#spinner {
     display: inline-block;
-    width: 64px;
-    height: 64px;
+    width: 128px;
+    height: 128px;
     border: 3px solid rgba(255, 255, 255, .3);
     border-radius: 50%;
-    border-top-color: #91B3A9;
-    animation: spin 1.2s ease-in-out infinite;
-    -webkit-animation: spin 1.2s ease-in-out infinite;
+    border-top-color: rgba(255, 255, 255, 1);
+    animation: spin 2.2s ease-in-out infinite;
+    -webkit-animation: spin 2.2s ease-in-out infinite;
   }
 
   @keyframes spin {
@@ -56,9 +56,7 @@
 
 <body>
   <div id="presentacion">
-    <h1>Hola, soy Alexandru 👋</h1>
-    <p>Te estoy redirigiendo a mi perfil de GitHub, un momento.</p>
-    <div id="spinner"></div>
+    <div id="spinner"><img width="125" height="125" src="/avatar.png" alt="Avatar de amun06 transparente, generado con uimaterial.com"></div>
   </div>
 </body>
 
