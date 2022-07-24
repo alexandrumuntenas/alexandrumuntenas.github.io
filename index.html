@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alexandru Muntenas - Uno más en este mundo hiperconectado</title>
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <style>
   @font-face {
@@ -184,7 +185,7 @@
 <body>
   <div id="intro">
     <div id="intro-content">
-        <img src="/avatar.png" alt="Avatar de amun06 transparente, generado con uimaterial.com" width="128" height="128">
+        <img class="avatar" src="/avatar.png" alt="Avatar de amun06 transparente, generado con uimaterial.com" width="128" height="128">
         <p class="title">Alexandru Muntenas</p>
         <p class="subtitle">Uno más en este mundo hiperconectado</p>
     </div>
@@ -196,14 +197,14 @@
     <div id="presentacion-content">
       <center>
         <div id="xIADVvad">
-          <p>
+          <p class="xIADVvad1">
             Actualmente estoy cursando los estudios de la Educación Post-Obligatoria de Bachillerato Tecnológico en España. Soy
             percusionista y me vuelve loco la música. Programador aprendiz independiente, comencé recientemente y poco a poco voy
             aprendiendo en mi alocado horario. A parte, también me gusta leer, jugar al Minecraft, GNU/Linux, Windows 11 y muchas
             otras cosas.
           </p>
 
-          <p>
+          <p class="xIADVvad2">
             Estoy enfocando mi aprendizaje sobretodo a NodeJS. He comenzado un proyectillo que me lleva ya acompañando por 1 año, mi
             bot de Discord, Pingu, que, con este, cada cosa nueva que voy haciendo, siempre trato de añadirme algún nuevo obstáculo
             para motivar mi aprendizaje y superarme. Gracias a los cual he logrado adquirir unos conocimientos de JS, lo
@@ -211,18 +212,18 @@
             mucho la atención desde el primer momento.
           </p>
 
-          <p>
+          <p class="xIADVvad3">
             Dispongo de conocimientos básicos de HTML y CSS3, los cuales los he utilizado para construir mi página de inicio; PHP y
             MySQL, los cuales empleé para iniciar un pequeño proyecto de gestión de bibliotecas, el código fuente ya no lo tengo,
             desafortunadamente; y bueno, JS y TS, ya fueron nombrados.
           </p>
 
-          <p>
+          <p class="xIADVvad4">
             Para expandir mi conocimiento, estoy interesado en trabajar con frameworks como AdonisJS y AngularJS, aprender a
             utilizar bases de datos como MongoDB y Redis, entre otros.
           </p>
 
-          <p>
+          <p class="xIADVvad5">
             Este soy yo. Un ser más en este mundo hiperconectado.
           </p>
         </div>
@@ -232,8 +233,8 @@
 
   <div id="frase-destacada">
     <div id="frase">
-      <p id="dicho">Solo sé que no sé nada</p>
-      <p id="autor">Sócrates</p>
+      <p id="dicho" class="dicho">Solo sé que no sé nada</p>
+      <p id="autor" class="autor">Sócrates</p>
     </div>
   </div>
 
@@ -244,5 +245,15 @@
 
 <script>
   document.getElementById('year').innerHTML = new Date().getFullYear()
+
+  ScrollReveal().reveal('.title')
+  ScrollReveal().reveal('.subtitle')
+  ScrollReveal().reveal('.xIADVvad1')
+  ScrollReveal().reveal('.xIADVvad2')
+  ScrollReveal().reveal('.xIADVvad3')
+  ScrollReveal().reveal('.xIADVvad4')
+  ScrollReveal().reveal('.xIADVvad5')
+  ScrollReveal().reveal('.dicho')
+  ScrollReveal().reveal('.autor')
 </script>
 </html>
