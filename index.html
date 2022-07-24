@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alexandru Muntenas - Another Guy In The World</title>
+  <title>Alexandru Muntenas - Uno más en este mundo hiperconectado</title>
 </head>
 <style>
   @font-face {
@@ -35,19 +35,35 @@
     font-stretch: condensed;
   }
 
-  body div#intro, body div#introduccion-detallada {
-    height: 90vh;
+  body div#intro, body div#presentacion, body div#frase-destacada {
+    height: 100vh;
     display: flex;
   }
 
-  body div#intro div#intro-content, body div#sobre-mi {
+  body div#intro div#intro-content, body div#presentacion-content, body div#frase {
     align-self: center;
     width: 100%;
   }
 
-  body div#intro p {
+  body div#intro p{
     text-align: center;
     margin: 0;
+  }
+
+  body div#presentacion-content a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #1F0318;
+    padding: 10px 50px;
+    border: #1F0318 solid 2px;
+    border-radius: 100vh;
+    transition: .5s;
+  }
+
+  body div#presentacion-content a:hover {
+    background: #1F0318;
+    transition: .5s;
+    color: #f1f1f1;
   }
 
   body div#intro p.title {
@@ -69,14 +85,13 @@
     margin: 0px;
     display: flex;
     align-items: center;
-    border-top: 1px  solid #c1c1c1;
   }
 
   body div#footer div#links {
     display: flex;
   }
 
- .scroll-down {
+  .scroll-down {
     opacity: 1;
     -webkit-transition: all .5s ease-in .5s;
     transition: all .5s ease-in .5s;
@@ -108,7 +123,7 @@
       width: 12px;
       height: 12px;
       content: "";
-      border: 2px solid #a9a9a9;
+      border: 2px solid #1F0318;
       border-width: 0px 0 2px 2px;
   }
 
@@ -134,15 +149,39 @@
     }
   }
 
-  body div#sobre-mi p {
+  body div#footer {
+    height: 33vh;
+    display: flex;
+  }
+
+  body div#footer p, body div#frase p{
+    align-self: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  body div#frase p#dicho {
+    font-size: 50px;
+    margin: 0;
+    font-weight: 600;
+  }
+
+  body div#frase p#autor {
+    font-size: 20px;
+    font-style: italic;
+  }
+
+  div#xIADVvad {
     max-width: 500px;
+  }
+
+  div#xIADVvad p{
+    text-align: justify;
+    margin: 15px;
   }
 </style>
 
 <body>
-  <div id="header">
-  </div>
-
   <div id="intro">
     <div id="intro-content">
         <img src="/avatar.png" alt="Avatar de amun06 transparente, generado con uimaterial.com" width="128" height="128">
@@ -151,10 +190,59 @@
     </div>
   </div>
 
-  <a class="scroll-down"></a>
+  <a href="#presentacion" class="scroll-down"></a>
+
+  <div id="presentacion">
+    <div id="presentacion-content">
+      <center>
+        <div id="xIADVvad">
+          <p>
+            Actualmente estoy cursando los estudios de la Educación Post-Obligatoria de Bachillerato Tecnológico en España. Soy
+            percusionista y me vuelve loco la música. Programador aprendiz independiente, comencé recientemente y poco a poco voy
+            aprendiendo en mi alocado horario. A parte, también me gusta leer, jugar al Minecraft, GNU/Linux, Windows 11 y muchas
+            otras cosas.
+          </p>
+
+          <p>
+            Estoy enfocando mi aprendizaje sobretodo a NodeJS. He comenzado un proyectillo que me lleva ya acompañando por 1 año, mi
+            bot de Discord, Pingu, que, con este, cada cosa nueva que voy haciendo, siempre trato de añadirme algún nuevo obstáculo
+            para motivar mi aprendizaje y superarme. Gracias a los cual he logrado adquirir unos conocimientos de JS, lo
+            suficientemente adecuados para defenderme en el terreno. Recientemente he comenzado a trabajar con TS, dado que me llamó
+            mucho la atención desde el primer momento.
+          </p>
+
+          <p>
+            Dispongo de conocimientos básicos de HTML y CSS3, los cuales los he utilizado para construir mi página de inicio; PHP y
+            MySQL, los cuales empleé para iniciar un pequeño proyecto de gestión de bibliotecas, el código fuente ya no lo tengo,
+            desafortunadamente; y bueno, JS y TS, ya fueron nombrados.
+          </p>
+
+          <p>
+            Para expandir mi conocimiento, estoy interesado en trabajar con frameworks como AdonisJS y AngularJS, aprender a
+            utilizar bases de datos como MongoDB y Redis, entre otros.
+          </p>
+
+          <p>
+            Este soy yo. Un ser más en este mundo hiperconectado.
+          </p>
+        </div>
+      </center>
+    </div>
+  </div>
+
+  <div id="frase-destacada">
+    <div id="frase">
+      <p id="dicho">Solo sé que no sé nada</p>
+      <p id="autor">Sócrates</p>
+    </div>
+  </div>
+
+  <div id="footer">
+    <p>©️ <y id="year"></y> Alexandru Muntenas</p>
+  </div>
 </body>
 
 <script>
-  // document.getElementById('year').innerHTML = new Date().getFullYear()
+  document.getElementById('year').innerHTML = new Date().getFullYear()
 </script>
 </html>
