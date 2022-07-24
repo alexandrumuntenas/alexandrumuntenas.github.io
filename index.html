@@ -5,64 +5,156 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alexandru Muntenas</title>
+  <title>Alexandru Muntenas - Another Guy In The World</title>
 </head>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Ubuntu+Mono&display=swap');
+  @font-face {
+    font-family: 'Open Sans';
+    src: url('/fonts/OpenSans-Regular.ttf');
+  }
 
-    html {
-    background: rgb(255, 227, 227);
-    background: linear-gradient(225deg, #B1B2C4 0%, #8182A0 34.9%, #4B4C75 100%) fixed;
+  html {
+    background: #f1f1f1;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffe3e3", endColorstr="#fff9d5", GradientType=1);
-    color: #2c2c2c;
-    font-family: 'Ubuntu Mono', monospace;
-    font-weight: 100;
+    color: #1F0318;
+    font-weight: 200;
+    font-family: 'Open Sans';
     height: 100%;
   }
 
-  div#presentacion {
+  body p{
+    text-align: justify;
+  }
+
+  body main {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+    max-width: 600px;
+    font-stretch: condensed;
+  }
+
+  body div#intro, body div#introduccion-detallada {
+    height: 90vh;
+    display: flex;
+  }
+
+  body div#intro div#intro-content, body div#sobre-mi {
+    align-self: center;
+    width: 100%;
+  }
+
+  body div#intro p {
     text-align: center;
+    margin: 0;
+  }
+
+  body div#intro p.title {
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  body div#intro p.subtitle {
+    font-size: 20px;
+  }
+
+  body div#intro img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  body div#footer {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    border-top: 1px  solid #c1c1c1;
+  }
+
+  body div#footer div#links {
+    display: flex;
+  }
+
+ .scroll-down {
+    opacity: 1;
+    -webkit-transition: all .5s ease-in .5s;
+    transition: all .5s ease-in .5s;
+  }
+
+  .scroll-down {
     position: absolute;
-    top: 50%;
+    bottom: 30px;
     left: 50%;
-    transform: translate(-50%, -50%);
-    color: #2c2c2c;
-    height: auto;
-  }
-
-  div#spinner {
-    display: inline-block;
-    width: 128px;
-    height: 128px;
-    border: 3px solid rgba(255, 255, 255, .3);
+    margin-left: -16px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-size: 14px auto;
     border-radius: 50%;
-    border-top-color: rgba(255, 255, 255, 1);
-    animation: spin 2.2s ease-in-out infinite;
-    -webkit-animation: spin 2.2s ease-in-out infinite;
+    z-index: 2;
+    -webkit-animation: bounce 2s infinite 2s;
+    animation: bounce 2s infinite 2s;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
   }
 
-  @keyframes spin {
-    to {
-      -webkit-transform: rotate(360deg);
+  .scroll-down:before {
+      position: absolute;
+      top: calc(50% - 8px);
+      left: calc(50% - 6px);
+      transform: rotate(-45deg);
+      display: block;
+      width: 12px;
+      height: 12px;
+      content: "";
+      border: 2px solid #a9a9a9;
+      border-width: 0px 0 2px 2px;
+  }
+
+  @keyframes bounce {
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+      transform: translateY(-10px);
+    }
+    60% {
+      -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+      transform: translateY(-5px);
     }
   }
 
-  @-webkit-keyframes spin {
-    to {
-      -webkit-transform: rotate(360deg);
-    }
+  body div#sobre-mi p {
+    max-width: 500px;
   }
 </style>
 
 <body>
-  <div id="presentacion">
-    <div id="spinner"><img width="125" height="125" src="/avatar.png" alt="Avatar de amun06 transparente, generado con uimaterial.com"></div>
+  <div id="header">
   </div>
+
+  <div id="intro">
+    <div id="intro-content">
+        <img src="/avatar.png" alt="Avatar de amun06 transparente, generado con uimaterial.com" width="128" height="128">
+        <p class="title">Alexandru Muntenas</p>
+        <p class="subtitle">Solo sé que no sé nada - <i>Sócrates</i></p>
+    </div>
+  </div>
+
+  <a class="scroll-down"></a>
 </body>
 
 <script>
-  setTimeout(() => {
-    window.location.replace("https://github.com/amun06")
-  }, 1500)
+  // document.getElementById('year').innerHTML = new Date().getFullYear()
 </script>
 </html>
